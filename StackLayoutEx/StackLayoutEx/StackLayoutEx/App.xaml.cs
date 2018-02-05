@@ -13,7 +13,7 @@ namespace StackLayoutEx
 		{
 			InitializeComponent();
 
-			MainPage = new StackLayoutEx.MainPage();
+			MainPage = new Exercise1();
 		}
 
 		protected override void OnStart ()
