@@ -13,7 +13,7 @@ namespace MoreLayouts
 		{
 			InitializeComponent();
 
-			MainPage = new GridExcercise2();
+			MainPage = new AbsoluteLayout();
 		}
 
 		protected override void OnStart ()
