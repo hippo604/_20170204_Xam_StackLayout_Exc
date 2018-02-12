@@ -11,10 +11,10 @@
             </StackLayout>
             <StackLayout AbsoluteLayout.LayoutBounds="0, 0.5, 1, 0.33" AbsoluteLayout.LayoutFlags="All" VerticalOptions="Center">
                 <Label Text="Why pay for credit?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center"/>
-                <Label FontSize="13" HorizontalOptions="CenterAndExpand">
-                    Because you can reach people who aren't
+                <Label FontSize="13" HorizontalTextAlignment="Center">
+Because you can reach people who aren't
 on SkyApp by calling mobile and landline 
-numbers, or spending SMS, at lo-cost rates.</Label>
+numbers, or spending SMS, at low-cost rates.</Label>
             </StackLayout>
         </AbsoluteLayout>
 
