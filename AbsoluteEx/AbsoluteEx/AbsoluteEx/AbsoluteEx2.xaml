@@ -7,6 +7,11 @@
             <Image Source = "http://lorempixel.com/1920/1080/nature/7" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"/>
             <Label Text ="Relax" FontSize="30" TextColor="White" AbsoluteLayout.LayoutBounds="0,20,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" HorizontalOptions="Center"/>
             <BoxView Color="Black" Opacity="0.5" AbsoluteLayout.LayoutBounds="0, 1, 1, 100" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+            <StackLayout Padding="30,0" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="0,1,1,100" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" VerticalOptions="Center">
+                <Label Text="Profile" FontSize="15" TextColor="White" HorizontalOptions="Center"/>
+                <Label Text="Meditate" FontSize="15" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Themes" FontSize="15" TextColor="White" HorizontalOptions="Center"/>
+            </StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
