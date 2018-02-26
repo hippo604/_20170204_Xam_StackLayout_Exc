@@ -13,7 +13,7 @@ namespace Images
 		{
 			InitializeComponent();
 
-			MainPage = new Images();
+			MainPage = new Embedded();
 		}
 
 		protected override void OnStart ()
