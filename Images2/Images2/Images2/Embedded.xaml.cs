@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Images
+namespace Images2
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Embedded : ContentPage
@@ -15,9 +15,6 @@ namespace Images
 		public Embedded ()
 		{
 			InitializeComponent ();
-            //image.Source = ImageSource.FromFile("car_in_japan.jpg");
-            //image.Source = ImageSource.FromResource("Images.Images.two_trees.jpg");
-            //doesn't work...
 		}
 	}
 }

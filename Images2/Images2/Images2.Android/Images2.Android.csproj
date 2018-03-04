@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A3E0F947-555E-48DB-800B-EB73DFB9C4CF}</ProjectGuid>
+    <ProjectGuid>{2DCE5224-AB18-4825-BA5F-21BC33559B95}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Images.Droid</RootNamespace>
-    <AssemblyName>Images.Android</AssemblyName>
+    <RootNamespace>Images2.Droid</RootNamespace>
+    <AssemblyName>Images2.Android</AssemblyName>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -80,13 +80,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Images\Images.csproj">
-      <Project>{8BBE9035-C42E-4174-B593-86FC8BF77934}</Project>
-      <Name>Images</Name>
+    <ProjectReference Include="..\Images2\Images2.csproj">
+      <Project>{A5F3BB1D-E499-4CC8-82E4-35999702C2D2}</Project>
+      <Name>Images2</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\car_in_japan.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
