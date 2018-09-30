@@ -13,7 +13,7 @@ namespace AbsoluteEx
 		{
 			InitializeComponent();
 
-			MainPage = new AbsoluteEx2();
+			MainPage = new AbsoluteEx();
 		}
 
 		protected override void OnStart ()
