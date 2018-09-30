@@ -4,15 +4,17 @@
              x:Class="MoreLayouts.Grid2">
     <ContentPage.Content>
         <Grid BackgroundColor="Yellow"
-              RowSpacing="40"
+              RowSpacing="20"
               ColumnSpacing="40">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="2*" />
+                <!--                <RowDefinition Height="Auto" />-->
+                <RowDefinition Height="50" />
+
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="25"/>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="*"/>
 
@@ -21,8 +23,9 @@
             <Label Grid.Row="0" Grid.Column="1" Text="Label 2" BackgroundColor="Silver" />
             <Label Grid.Row="1" Grid.Column="0" Text="Label 3" BackgroundColor="Silver" />
             <Label Grid.Row="1" Grid.Column="1" Text="Label 4" BackgroundColor="Silver" />
-            <Label Grid.Column="2" Grid.RowSpan="3" Text="RowSpan" BackgroundColor="Green"/>
             <Label Grid.Row="2" Grid.ColumnSpan="3" Text="ColumnSpan" BackgroundColor="Silver" />
+
+            <Label Grid.Column="2" Grid.RowSpan="3" Text="RowSpan" BackgroundColor="Green"/>
 
 
         </Grid>

@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace RelLayt
+namespace Lists3_20180930
 {
 	public partial class App : Application
 	{
@@ -13,7 +13,7 @@ namespace RelLayt
 		{
 			InitializeComponent();
 
-			MainPage = new RelLayt2();
+			MainPage = new Lists3_20180930.Lists();
 		}
 
 		protected override void OnStart ()
