@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace Images2
+namespace Images4
 {
 	public partial class App : Application
 	{
@@ -13,7 +13,7 @@ namespace Images2
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new Images4.MainPage();
 		}
 
 		protected override void OnStart ()
