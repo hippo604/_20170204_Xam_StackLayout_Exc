@@ -13,3 +13,7 @@ namespace Lists3_20180930.Models
 
 
 }
+public class Employee
+{
+    public string DisplayName { get; set; }
+}

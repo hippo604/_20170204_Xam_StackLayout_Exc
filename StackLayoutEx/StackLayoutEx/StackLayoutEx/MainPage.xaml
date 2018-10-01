@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:StackLayoutEx"
              x:Class="StackLayoutEx.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
+	<Label Text="Welcome to Xamarin.Formsa!" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 

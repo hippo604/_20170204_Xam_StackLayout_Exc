@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lists3_20180930.Lists">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="listView" SeparatorColor="Blue"/>
+        <StackLayout BackgroundColor="Orange">
+            <ListView x:Name="listView"/> 
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
