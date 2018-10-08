@@ -11,7 +11,7 @@ namespace XamlApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Lists();
         }
 
         protected override void OnStart()
