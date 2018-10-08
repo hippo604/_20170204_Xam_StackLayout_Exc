@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lists3_20180930.Lists">
+             x:Class="Lists_Oct_of_Eightn.Lists">
     <ContentPage.Content>
         <StackLayout BackgroundColor="Red">
             <ListView x:Name="listView" 
@@ -15,4 +15,4 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-    </ContentPage>
+</ContentPage>

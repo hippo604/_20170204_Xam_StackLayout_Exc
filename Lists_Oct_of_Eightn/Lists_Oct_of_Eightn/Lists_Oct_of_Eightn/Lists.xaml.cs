@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Lists3_20180930.Models;
+using Lists_Oct_of_Eightn.Models;
 using System.Collections.ObjectModel;
+using Models;
 
-
-
-namespace Lists3_20180930
+namespace Lists_Oct_of_Eightn
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Lists : ContentPage
