@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{922AF2FE-0582-4A2A-B63D-BE35E54BD6FF}</ProjectGuid>
+    <ProjectGuid>{7B4AE0FF-6510-478D-A5A4-C6AE66A614FA}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>XamlApp.Droid</RootNamespace>
-    <AssemblyName>XamlApp.Android</AssemblyName>
+    <RootNamespace>XamlAppIII.Droid</RootNamespace>
+    <AssemblyName>XamlAppIII.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -20,11 +20,6 @@
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AndroidKeyStore>false</AndroidKeyStore>
-    <AndroidSigningKeyStore>
-    </AndroidSigningKeyStore>
-    <AndroidSigningStorePass>
-    </AndroidSigningStorePass>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,13 +29,12 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkMode>None</AndroidLinkMode>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <EnableProguard>true</EnableProguard>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +48,7 @@
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidLinkMode>Full</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
@@ -107,9 +102,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamlApp\XamlApp.csproj">
-      <Project>{5BEB461A-D14C-49E8-920C-F77FDA13B92E}</Project>
-      <Name>XamlApp</Name>
+    <ProjectReference Include="..\XamlAppIII\XamlAppIII.csproj">
+      <Project>{F63DB8A0-9E13-4A85-8BB6-0828857F54A8}</Project>
+      <Name>XamlAppIII</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -6,11 +6,11 @@ using Android.App;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XamlApp.Android")]
+[assembly: AssemblyTitle("XamlAppIII.Android")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("XamlApp.Android")]
+[assembly: AssemblyProduct("XamlAppIII.Android")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -33,10 +33,12 @@ using Android.App;
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
 
+
+
+
 #if DEBUG
-[assembly: Application(Debuggable=true)]
+[assembly: Application(Debuggable = true)]
 #else
 [assembly: Application(Debuggable=false)]
 #endif
-
 
