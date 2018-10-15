@@ -14,19 +14,9 @@ namespace XamlAppIII
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Lists : ContentPage
 	{
-
-
-
-        public Lists()
-        {
-            InitializeComponent();
-
-            listView.ItemsSource = new List<Contact>
-            {
-                new Contact { Name = "Mosh", Status = "abc", ImageUrl = "https://via.placeholder.com/100x100/ff7f7f/333333?text=Mosh"},
-                new Contact { Name = "John", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=John"}
-            };
-        }
+        //Most collections are iEnumerable, which is a lightweight
+        //interface (can't remove)
+        private ObservableCollection<Contact> _contacts;
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -40,7 +30,45 @@ namespace XamlAppIII
         {
             var contact = e.SelectedItem as Contact;
 
-            DisplayAlert("Selected", contact.Name, "OK");
+            //DisplayAlert("Selected", contact.Name, "OK");
         }
+               
+        //sender is menu item
+        void Call_Clicked(object sender, System.EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            var contact = menuItem.CommandParameter as Contact;
+
+            DisplayAlert("Call", contact.Name, "OK");
+        }
+
+        void Delete_Clicked(object sender, System.EventArgs e)
+        {
+            //2 lines above in 1 line
+            var contact = (sender as MenuItem).CommandParameter as Contact;
+            _contacts.Remove(contact);
+            
+        }
+
+        public Lists()
+        {
+            InitializeComponent();
+
+
+            //Before ↓　was listView.ItemsSource = new List<Contact>
+            //ObsvblCollctn needed for refresh to show deleted contacts
+            _contacts = new ObservableCollection<Contact>
+            {
+                new Contact { Name = "Mosh", Status = "abc", ImageUrl = "https://via.placeholder.com/100x100/ff7f7f/333333?text=Mosh"},
+                new Contact { Name = "John", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=John"}
+            };
+
+            //These changes make contact in list deletable thru the Delete handler
+            listView.ItemsSource = _contacts;
+        }
+
+
+
+
     }
 }
