@@ -11,12 +11,25 @@ using System.Collections.ObjectModel;
 
 namespace XamlAppIII
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Lists : ContentPage
-	{
-        //Most collections are iEnumerable, which is a lightweight
-        //interface (can't remove)
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Lists : ContentPage
+    {
         private ObservableCollection<Contact> _contacts;
+
+        //For this exercise contacts were split out in a function
+        //_contacts is my awkward workaround to maintain the deletion context choice
+        ObservableCollection<Contact> GetContacts()
+        {
+            _contacts = new ObservableCollection<Contact> {
+                new Contact { Name = "Mosh", Status = "abc", ImageUrl = "https://via.placeholder.com/100x100/ff7f7f/333333?text=Mosh"},
+                new Contact { Name = "John", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=John"},
+                new Contact { Name = "Stan", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=Stan"},
+                new Contact { Name = "Joe", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=Stan"}
+
+            };
+            return _contacts;
+        }
+
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -50,21 +63,18 @@ namespace XamlAppIII
             
         }
 
+        void Handle_Refreshing(object sender, System.EventArgs e)
+        {
+            //Using _contacts below prevents the undeletion effect
+            listView.ItemsSource = GetContacts();
+            listView.EndRefresh();
+        }
+
         public Lists()
         {
             InitializeComponent();
-
-
-            //Before ↓　was listView.ItemsSource = new List<Contact>
-            //ObsvblCollctn needed for refresh to show deleted contacts
-            _contacts = new ObservableCollection<Contact>
-            {
-                new Contact { Name = "Mosh", Status = "abc", ImageUrl = "https://via.placeholder.com/100x100/ff7f7f/333333?text=Mosh"},
-                new Contact { Name = "John", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=John"}
-            };
-
-            //These changes make contact in list deletable thru the Delete handler
-            listView.ItemsSource = _contacts;
+            //Change below to reference to function
+            listView.ItemsSource = GetContacts();
         }
 
 
