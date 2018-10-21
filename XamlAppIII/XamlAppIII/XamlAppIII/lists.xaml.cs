@@ -14,20 +14,22 @@ namespace XamlAppIII
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Lists : ContentPage
     {
-        private ObservableCollection<Contact> _contacts;
+        private IEnumerable<Contact> _contacts;
 
         //For this exercise contacts were split out in a function
         //_contacts is my awkward workaround to maintain the deletion context choice
-        ObservableCollection<Contact> GetContacts()
+        IEnumerable<Contact> GetContacts(string searchText = null)
         {
-            _contacts = new ObservableCollection<Contact> {
+            _contacts = new List<Contact> {
                 new Contact { Name = "Mosh", Status = "abc", ImageUrl = "https://via.placeholder.com/100x100/ff7f7f/333333?text=Mosh"},
-                new Contact { Name = "John", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=John"},
-                new Contact { Name = "Stan", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=Stan"},
-                new Contact { Name = "Joe", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=Stan"}
-
+                new Contact { Name = "Joe", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=Stan"},
+                new Contact { Name = "たろう", Status = "def", ImageUrl = "https://via.placeholder.com/100x100/ff7f77/333333?text=Taro"}
             };
-            return _contacts;
+
+            if (String.IsNullOrWhiteSpace(searchText))
+                return _contacts;
+
+            return _contacts.Where(c => c.Name.StartsWith(searchText, StringComparison.CurrentCultureIgnoreCase));
         }
 
 
@@ -59,7 +61,7 @@ namespace XamlAppIII
         {
             //2 lines above in 1 line
             var contact = (sender as MenuItem).CommandParameter as Contact;
-            _contacts.Remove(contact);
+            //_contacts.Remove(contact);
             
         }
 
@@ -68,6 +70,11 @@ namespace XamlAppIII
             //Using _contacts below prevents the undeletion effect
             listView.ItemsSource = GetContacts();
             listView.EndRefresh();
+        }
+
+        void Handle_Textchanged(object sender, TextChangedEventArgs e)
+        {
+            listView.ItemsSource = GetContacts(e.NewTextValue);
         }
 
         public Lists()
