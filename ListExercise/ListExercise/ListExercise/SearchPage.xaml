@@ -4,7 +4,7 @@
              x:Class="ListExercise.SearchPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView" SeparatorColor="Blue">
+            <ListView x:Name="listView" SeparatorColor="Blue" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

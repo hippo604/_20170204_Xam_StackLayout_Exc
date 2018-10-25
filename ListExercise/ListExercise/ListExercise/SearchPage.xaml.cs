@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ListExercise.Models;
+using System.Collections.ObjectModel;
 
 namespace ListExercise
 {
@@ -16,13 +17,14 @@ namespace ListExercise
 		public SearchPage ()
 		{
 			InitializeComponent ();
-            var searches = new List<Search>
+            var searches = new ObservableCollection<SearchGroup2>
             {
-                new Search {Id="1", Location="Hollywood", CheckIn=new DateTime(2018, 04, 14), CheckOut = new DateTime(2018, 04, 15) },
-                new Search {Id="2", Location="Bollywood", CheckIn=new DateTime(2018, 06, 14), CheckOut = new DateTime(2018, 06, 15) },
-                new Search {Id="3", Location="Tokyo", CheckIn=new DateTime(2018, 05, 14), CheckOut = new DateTime(2018, 05, 15) }
-
-
+                new SearchGroup2("Recent Searches"){
+                    new Search {Id="1", Location="Taipei 台北", CheckIn=new DateTime(2018, 04, 14), CheckOut = new DateTime(2018, 04, 15) },
+                    new Search {Id="2", Location="Naha 那覇", CheckIn=new DateTime(2018, 04, 14), CheckOut = new DateTime(2018, 04, 15) },
+                    new Search {Id="3", Location="Kumamoto 熊本", CheckIn=new DateTime(2018, 06, 14), CheckOut = new DateTime(2018, 06, 15) },
+                    new Search {Id="4", Location="Tokyo 東京", CheckIn=new DateTime(2018, 05, 14), CheckOut = new DateTime(2018, 05, 15) }
+                }
             };
 
             listView.ItemsSource = searches;
