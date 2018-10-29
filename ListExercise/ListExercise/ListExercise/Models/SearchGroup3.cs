@@ -11,7 +11,8 @@ namespace ListExercise.Models
         public string Title { get; set; }
         public IEnumerable<Search> Searches;
 
-        //... and base is needed for listView to display searches properly
+        //... which allows access members of the base class
+        //so that listView displays searches properly
         public SearchGroup3(string title, IEnumerable<Search> searches) 
             : base(searches)
         {
