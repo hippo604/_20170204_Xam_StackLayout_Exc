@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ListExercise
 {
@@ -11,11 +12,14 @@ namespace ListExercise
         {
             InitializeComponent();
 
-            MainPage = new SearchPage();
+            //MainPage = new SearchPageB();
+            MainPage = new SearchPageB();
         }
 
         protected override void OnStart()
         {
+            
+
             // Handle when your app starts
         }
 

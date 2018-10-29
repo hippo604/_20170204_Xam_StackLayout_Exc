@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ListExercise.Models
 {
-    class SearchGroup2 : ObservableCollection<Search>
+    class SearchGroup2 : List<Search>
     {
         public string Title { get; set; }
 
@@ -13,6 +13,7 @@ namespace ListExercise.Models
         {
             Title = title;
         }
+
 
     }
 }

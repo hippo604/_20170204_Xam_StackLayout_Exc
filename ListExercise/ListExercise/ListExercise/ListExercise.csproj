@@ -11,6 +11,13 @@
 
   <ItemGroup>
     <Compile Remove="Models\Search2.cs" />
+    <Compile Remove="SearchPage.xaml.cs" />
+    <Compile Remove="SearchPageB.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SearchPage.xaml.cs" />
+    <EmbeddedResource Include="SearchPageB.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +26,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SearchPageB.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
