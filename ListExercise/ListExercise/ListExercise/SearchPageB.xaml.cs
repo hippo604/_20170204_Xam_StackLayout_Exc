@@ -15,15 +15,26 @@ namespace ListExercise
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchPageB : ContentPage
     {
+        SearchService searchService = new SearchService();
+
+        void Handle_Textchanged(object sender, TextChangedEventArgs e)
+        {
+            listView.ItemsSource = new List<SearchGroup3>()
+            {
+                new SearchGroup3("Recent Searches", searchService.GetSearches(e.NewTextValue))
+            };
+        }
+
         public SearchPageB()
         {
             InitializeComponent();
-            SearchService searchService = new SearchService();
 
             listView.ItemsSource = new List<SearchGroup3>()
             {
                 new SearchGroup3("Recent Searches", searchService.GetSearches())
             };
         }
+
+
     }
 }
