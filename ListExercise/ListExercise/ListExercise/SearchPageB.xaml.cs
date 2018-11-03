@@ -18,25 +18,15 @@ namespace ListExercise
         List<SearchGroup3> _searchGroups = new List<SearchGroup3>();
 
         SearchService searchService = new SearchService();
-               
+
         void Handle_Textchanged(object sender, TextChangedEventArgs e)
         {
-            _searchGroups = new List<SearchGroup3>()
-            {
-                new SearchGroup3("Recent Searches", searchService.GetSearches(e.NewTextValue))
-            };
-
-            listView.ItemsSource = _searchGroups;
+            RefreshListView(searchService.GetSearches(e.NewTextValue)); 
         }
 
         void Handle_Refreshing(object sender, System.EventArgs e)
         {
-            _searchGroups = new List<SearchGroup3>()
-            {
-                new SearchGroup3("Recent Searches", searchService.GetSearches(searchBar.Text))
-            };
-
-            listView.ItemsSource = _searchGroups;
+            RefreshListView(searchService.GetSearches(searchBar.Text));
 
             listView.EndRefresh();
         }
@@ -59,16 +49,23 @@ namespace ListExercise
             DisplayAlert("Selected", search.Location, "OK");
         }
 
+        //When I created this originally, I passed a string x to
+        //searchService.GetSearches(x) but it didn't work (not sure why) 
+        void RefreshListView(IEnumerable<Search> searches)
+        {
+            _searchGroups = new List<SearchGroup3>()
+            {
+                new SearchGroup3("Recent Searches", searches)
+            };
+
+            listView.ItemsSource = _searchGroups;
+        }
+        
         public SearchPageB()
         {
             InitializeComponent();
 
-            _searchGroups = new List<SearchGroup3>()
-            {
-                new SearchGroup3("Recent Searches", searchService.GetSearches())
-            };
-
-            listView.ItemsSource = _searchGroups;
+            RefreshListView(searchService.GetSearches());
         }
     }
 }
