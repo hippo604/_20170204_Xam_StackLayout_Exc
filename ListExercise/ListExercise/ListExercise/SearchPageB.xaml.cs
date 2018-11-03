@@ -29,6 +29,18 @@ namespace ListExercise
             listView.ItemsSource = _searchGroups;
         }
 
+        void Handle_Refreshing(object sender, System.EventArgs e)
+        {
+            _searchGroups = new List<SearchGroup3>()
+            {
+                new SearchGroup3("Recent Searches", searchService.GetSearches(searchBar.Text))
+            };
+
+            listView.ItemsSource = _searchGroups;
+
+            listView.EndRefresh();
+        }
+
         void Delete_Clicked(object sender, System.EventArgs e)
         {
             var menuItem = sender as MenuItem;
@@ -39,6 +51,12 @@ namespace ListExercise
 
             //Delete from front end
             _searchGroups[0].Remove(search);
+        }
+
+        void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var search = e.SelectedItem as Search;
+            DisplayAlert("Selected", search.Location, "OK");
         }
 
         public SearchPageB()

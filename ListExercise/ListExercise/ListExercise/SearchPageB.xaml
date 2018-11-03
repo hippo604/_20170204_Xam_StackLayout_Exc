@@ -4,8 +4,9 @@
              x:Class="ListExercise.SearchPageB">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar Placeholder="Search..." TextChanged="Handle_Textchanged" HeightRequest="50"/>
-            <ListView x:Name="listView" SeparatorColor="Blue" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}">
+            <SearchBar x:Name="searchBar" Placeholder="Search..." TextChanged="Handle_Textchanged" HeightRequest="50"/>
+            <ListView x:Name="listView" SeparatorColor="Red" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}"
+                      IsPullToRefreshEnabled="True" Refreshing="Handle_Refreshing" ItemSelected="listView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

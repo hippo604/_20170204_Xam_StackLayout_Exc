@@ -8,6 +8,7 @@ namespace ListExercise.Models
 {
     class SearchService
     {
+
         private List<Search> _searches = new List<Search> {
                 new Search {Id="1", Location ="Taipei 台北", CheckIn = new DateTime(2018, 04, 14), CheckOut = new DateTime(2018, 04, 15) },
                 new Search {Id="2", Location="Naha 那覇", CheckIn=new DateTime(2018, 04, 14), CheckOut = new DateTime(2018, 04, 15) },
