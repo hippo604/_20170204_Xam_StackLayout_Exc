@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ToolsPlus"
+             x:Class="ToolsPlus.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="drawing.png" Text="New" Activated="ToolbarItem_Activated" Order="Primary"/>
+        <ToolbarItem Icon="drawing.png" Text="New" Activated="ToolbarItem_Activated" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+</ContentPage>
