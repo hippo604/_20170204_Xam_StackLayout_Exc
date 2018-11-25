@@ -8,7 +8,7 @@ using Xamarin.Forms;
 namespace Tabbed
 {
     //Change parent
-    public partial class MainPage : TabbedPage
+    public partial class MainPage : CarouselPage
     {
         public MainPage()
         {
