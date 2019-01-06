@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="40"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FormsSettingPages"
+    x:Class="FormsSettingPages.MainPage">
+
+    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center">
+        <!--Xamarin says it's a best practice to select the intent(?) -->
+        <TableView Intent="Form">
+                <TableRoot>
+                <!--One knows this is the content class by googling xamarin forms tableview class Root > TableRoot (at bottom)-->
+                <TableSection Title="Basics">
+                    <TextCell Text="Name" Detail="Bob Dobobara" />
+                    <EntryCell Label="Title" Placeholder="(Example:shopping)" Keyboard="Text" />
+                    <!-- You can handle events here but it's usually done at the form level-->
+                    <SwitchCell Text="Notifications" On="True" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+</ContentPage>
