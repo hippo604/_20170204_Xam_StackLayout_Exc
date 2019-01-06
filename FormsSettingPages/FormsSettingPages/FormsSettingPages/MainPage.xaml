@@ -16,7 +16,16 @@
                     <EntryCell Label="Title" Placeholder="(Example:shopping)" Keyboard="Text" />
                     <!-- You can handle events here but it's usually done at the form level-->
                     <SwitchCell Text="Notifications" On="True" />
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13,0">
+                            <!--Padding(horiz, vert)-->
+                            <Label Text="Starts" VerticalOptions="Center"/>
+                            <DatePicker Date="1 Jan 2019" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                    </ViewCell>
                 </TableSection>
+
             </TableRoot>
         </TableView>
     </StackLayout>
