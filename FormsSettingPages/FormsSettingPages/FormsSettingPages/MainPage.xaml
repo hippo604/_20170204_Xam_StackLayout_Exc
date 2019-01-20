@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage Padding="40"
+    xmlns:local="clr-namespace:FormsSettingPages"
+    xmlns:local2="clr-namespace:FormsSettingPages.Extensions"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:FormsSettingPages"
     x:Class="FormsSettingPages.MainPage">
 
     <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center">
@@ -16,16 +17,9 @@
                     <EntryCell Label="Title" Placeholder="(Example:shopping)" Keyboard="Text" />
                     <!-- You can handle events here but it's usually done at the form level-->
                     <SwitchCell Text="Notifications" On="True" />
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="13,0">
-                            <!--Padding(horiz, vert)-->
-                            <Label Text="Starts" VerticalOptions="Center"/>
-                            <DatePicker Date="1 Jan 2019" HorizontalOptions="EndAndExpand"/>
-                        </StackLayout>
-
-                    </ViewCell>
+                    <local2:DateCell2 Label="Starts"/>
+                    <local2:DateCell2 Label="Ends"/>
                 </TableSection>
-
             </TableRoot>
         </TableView>
     </StackLayout>
