@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Android", "DataAccess\DataAccess.Android\DataAccess.Android.csproj", "{A9ECAA10-3704-4012-927D-4B3FACD1AB56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess\DataAccess.csproj", "{5FDF1CCD-8A68-4786-9271-E7E6A4481FDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9ECAA10-3704-4012-927D-4B3FACD1AB56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9ECAA10-3704-4012-927D-4B3FACD1AB56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9ECAA10-3704-4012-927D-4B3FACD1AB56}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A9ECAA10-3704-4012-927D-4B3FACD1AB56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9ECAA10-3704-4012-927D-4B3FACD1AB56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9ECAA10-3704-4012-927D-4B3FACD1AB56}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5FDF1CCD-8A68-4786-9271-E7E6A4481FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDF1CCD-8A68-4786-9271-E7E6A4481FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDF1CCD-8A68-4786-9271-E7E6A4481FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDF1CCD-8A68-4786-9271-E7E6A4481FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {111089FE-54A4-4155-A1D2-13E786240836}
+	EndGlobalSection
+EndGlobal
